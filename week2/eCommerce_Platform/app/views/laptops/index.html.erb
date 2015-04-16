@@ -1,0 +1,24 @@
+<body>
+
+<header>
+	<h1 style="color:purple; text-align:center; background-color:#ADFF2F; font-family:cursive; padding:30px; border:5px solid black"> Laptops </h1>
+</header>
+
+	<p>
+		<%= image_tag("Portatil_Toshiva.png", height: "300", width: "320", align: "center") %>
+		<%= image_tag("Portatil_Apple.jpg", height: "300", width: "400", align: "center") %>
+
+		<% @laptops.each do |laptop|%>
+		<div style="font-family:Calibri;"><strong><%= laptop.brand %> </strong>
+			<%= link_to 'Show',  laptop_path(laptop)%>
+			<%= link_to 'Edit', edit_laptop_path(laptop) %>
+			<%= link_to 'Destroy', laptop_path(laptop), method: :delete, data: { confirm: 'Are you sure?' } %>
+		</div>
+
+		<% end %>
+	</p>
+
+	<p style="font-family:Calibri;">
+		<%= link_to 'New laptop', new_laptop_path %>
+	</p>
+</body>

@@ -1,0 +1,30 @@
+<body style="background-color:#F5F5DC;">
+	<h2 style="color:#8B0000; text-decoration:underline; font-family:Calibri;">
+		<strong>Brand:</strong>
+		<%= @laptop.brand %>
+	</h2>
+
+	<p style="color:black; font-family:Calibri;">
+		<strong>Model:</strong>
+		<%= @laptop.model %>
+	</p>
+
+	<p style="color:black; font-family:Calibri;"><strong>Processor Brand:</strong>
+		<%= @laptop.processor_brand %>
+	</p>
+
+	<p style="color:black; font-family:Calibri;">
+		<strong>RAM:</strong>
+		<%= @laptop.ram_size %>
+	</p>
+
+	<p style="color:black; font-family:Calibri;">
+		<strong>Price (€):</strong>
+		<%= @laptop.price %>
+	</p>
+
+	<p style="color:black; font-family:Calibri; border:2px;">
+		<%= link_to 'Edit', edit_laptop_path(@laptop)%> |
+    	<%= link_to 'Back', laptops_path%>
+	</p>
+</body>

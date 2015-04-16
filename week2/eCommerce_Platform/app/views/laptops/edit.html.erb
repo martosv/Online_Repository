@@ -1,0 +1,40 @@
+<body>
+
+  <h1 style="color:purple; background-color:#ADFF2F; text-align:center; padding:30px; font-family:cursive; border:5px solid black;">Editing Laptop</h1>
+
+  <%= form_for :laptop, url: laptop_path(@laptop), method: :patch do |f| %>
+  <p style="color:purple; font-family:Calibri;">
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </p>
+
+  <p style="color:purple; font-family:Calibri;">
+    <%= f.label :model %><br>
+    <%= f.text_area :model %>
+  </p>
+
+  <p style="color:purple; font-family:Calibri;">
+    <%= f.label :processor_brand %><br>
+    <%= f.text_area :processor_brand %>
+  </p>
+  
+  <p style="color:purple; font-family:Calibri;">
+    <%= f.label :ram_size %><br>
+    <%= f.text_area :ram_size %>
+  </p>
+
+  <p style="color:purple; font-family:Calibri;">
+    <%= f.label :price %><br>
+    <%= f.text_area :price %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <% end %>
+
+  <p>
+    <%= link_to 'Back', laptops_path%>
+  </p>
+</body>
