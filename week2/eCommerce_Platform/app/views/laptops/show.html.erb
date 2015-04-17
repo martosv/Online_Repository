@@ -1,30 +1,34 @@
-<body style="background-color:#F5F5DC;">
-	<h2 style="color:#8B0000; text-decoration:underline; font-family:Calibri;">
+<body class="bodycolor">
+	<h2 >
 		<strong>Brand:</strong>
 		<%= @laptop.brand %>
 	</h2>
 
-	<p style="color:black; font-family:Calibri;">
-		<strong>Model:</strong>
-		<%= @laptop.model %>
-	</p>
+	<ul>
+		<li class="styleblack">
+			<strong>Model:</strong>
+			<%= @laptop.model %>
+		</li>
 
-	<p style="color:black; font-family:Calibri;"><strong>Processor Brand:</strong>
-		<%= @laptop.processor_brand %>
-	</p>
+		<li class="styleblack">
+			<strong>Processor Brand:</strong>
+			<%= @laptop.processor_brand %>
+		</li>
 
-	<p style="color:black; font-family:Calibri;">
-		<strong>RAM:</strong>
-		<%= @laptop.ram_size %>
-	</p>
+		<li class="styleblack">
+			<strong>RAM:</strong>
+			<%= @laptop.ram_size %>
+		</li>
 
-	<p style="color:black; font-family:Calibri;">
-		<strong>Price (€):</strong>
-		<%= @laptop.price %>
-	</p>
-
-	<p style="color:black; font-family:Calibri; border:2px;">
+		<li class="styleblack">
+			<strong>Price (€):</strong>
+			<%= @laptop.price %>
+		</li>
+	</ul> 
+	
+	<p class="styleblack">
 		<%= link_to 'Edit', edit_laptop_path(@laptop)%> |
     	<%= link_to 'Back', laptops_path%>
 	</p>
+	
 </body>
