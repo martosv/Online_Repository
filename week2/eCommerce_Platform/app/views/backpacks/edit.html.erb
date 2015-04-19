@@ -1,0 +1,51 @@
+<body>
+  <header>
+    <h1>Editing Backpack</h1>
+  </header>
+
+  <%= form_for :backpack, html: {multipart: true}, url: backpack_path(@backpack), method: :patch do |x| %>
+ 
+<p class="stylemarino">
+    <%= x.label :model %><br>
+    <%= x.text_field :model %>
+  </p>
+
+  <p class="stylemarino">
+    <%= x.label :color %><br>
+    <%= x.text_area :color %>
+  </p>
+
+  <p class="stylemarino">
+    <%= x.label :capacity %><br>
+    <%= x.text_area :capacity %>
+  </p>
+
+  <p class="stylemarino">
+    <%= x.label :number_of_pockets %><br>
+    <%= x.text_area :number_of_pockets %>
+  </p>
+  
+  <p class="stylemarino">
+    <%= x.label :waterproof %><br>
+    <%= x.text_area :waterproof %>
+  </p>
+
+  <p class="stylemarino">
+    <%= x.label :price %><br>
+    <%= x.text_area :price %>
+  </p>
+
+  <p class="stylemarino">
+    <%= x.label :photo %><br>
+    <%= x.file_field :photo %><br>
+  </p>
+
+  <p>
+    <%= x.submit %>
+  </p>
+
+  <% end %>
+  <p>
+    <%= link_to 'Back', backpacks_path%>
+  </p>
+</body>
