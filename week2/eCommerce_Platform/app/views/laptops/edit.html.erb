@@ -3,8 +3,10 @@
     <h1>Editing Laptop</h1>
   </header>
 
-  <%= form_for :laptop, url: laptop_path(@laptop), method: :patch do |f| %>
- 
+  <%= form_for :laptop, url: laptop_path(@laptop), method: :patch do |f| %> 
+  <!--@laptop y :laptop es lo mismo-->
+  <!--@ method: :patch para que use el mismo metodo-->
+
   <p class="stylepurple">
     <%= f.label :brand %><br>
     <%= f.text_field :brand %>
